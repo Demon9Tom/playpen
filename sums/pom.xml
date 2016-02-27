@@ -7,6 +7,59 @@
     <groupId>tmr.playpen</groupId>
     <artifactId>sums</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>Sums</name>
+    <description>
+        Implementation of the Sums coding challenge found here:
+        http://blog.smartbear.com/programming/7-silly-programming-challenges-to-do-for-fun/
+    </description>
 
+    <properties>
+
+        <!-- Testing -->
+        <junit.version>4.12</junit.version>
+
+        <!-- Logging. -->
+        <logback.version>1.1.5</logback.version>
+
+    </properties>
+
+    <dependencies>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <!-- Logging. -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- Testing -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Logging. -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 
 </project>
