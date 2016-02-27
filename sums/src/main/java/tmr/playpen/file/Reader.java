@@ -2,8 +2,11 @@ package tmr.playpen.file;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import tmr.playpen.data.State;
-import tmr.playpen.data.StateSet;
+import tmr.playpen.data.Data;
+import tmr.playpen.data.DataSet;
+import tmr.playpen.data.School.SchoolSet;
+import tmr.playpen.data.State.StateSet;
+import tmr.playpen.data.city.CitySet;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,9 +44,13 @@ public class Reader
     public static void readFile(File inputFile)
     {
 
+        Output output = new Output();
+
         LOGGER.info("Reading contents of file = {}");
 
-        StateSet states = new StateSet();
+        DataSet schools = new SchoolSet();
+        DataSet cities  = new CitySet();
+        DataSet states  = new StateSet();
 
         try (Scanner scanner = new Scanner(inputFile))
         {
@@ -54,33 +61,37 @@ public class Reader
 
                 Map<String, String> splitLine = splitLine(line, LINE_SEPARATOR);
 
-                // Get a state instance to add the the student count for this line.
-                State state = states.getState(splitLine.get(STATE_KEY));
-                state.addStudents(Long.parseLong(splitLine.get(STUDENTS_KEY)));
+                // Retrieve the values from the Map.
+                String schoolName = splitLine.get(SCHOOL_KEY);
+                String cityName   = splitLine.get(CITY_KEY);
+                String stateName  = splitLine.get(STATE_KEY);
+                long students     = Long.parseLong(splitLine.get(STUDENTS_KEY));
 
-                // Get City
+                // Add the students to the school object.
+                Data school = schools.getObject(schoolName);
+                school.addStudents(students);
 
+                // Add the students to the city object.
+                Data city = cities.getObject(cityName);
+                city.addStudents(students);
 
+                // Add the students to the state object.
+                Data state = states.getObject(stateName);
+                state.addStudents(students);
 
-                // Get School
-
-
-
-                // Get Grade.
-
-
+                // Output each of the values if it is the final value.
+                output.printSchoolTotal(school, scanner.hasNext());
+                output.printCityTotal  (city,   scanner.hasNext());
+                output.printStateTotal (state,  scanner.hasNext());
             }
 
         }
 
-
-
-    catch (IOException e)
+        catch (IOException e)
         {
             LOGGER.error("Could not read input file.");
             LOGGER.debug("IO Exception thrown whilst attempting to read file = {}", inputFile);
         }
-
 
     }
 

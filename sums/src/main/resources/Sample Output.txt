@@ -1,9 +1,9 @@
-PS 122         6000
-St-Judes       100
-NYC            6100
-Green Acres    18
-Blue Hills     492
-Albany         510
-Happy Trails   76
-Rochester      76
-NY             6686
+PS 122 6000
+St-Judes 100
+NYC 6100
+Green Acres 18
+Blue Hills 492
+Albany 510
+Happy Trails 76
+Rochester 76
+NY 6686
