@@ -34,7 +34,7 @@ public class Reader
      * Reads in the value of the INPUT_FILE.
      *
      * Note: We are using {@link Scanner} here rather than {@link Stream} or other Java NIO classes due to the
-     * requirement to read the file line-by-line as opposed to reading the file in completly and then converting it to a
+     * requirement to read the file line-by-line as opposed to reading the file in completely and then converting it to a
      * list.
      * @param inputFile The file to read from.
      */
