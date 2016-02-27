@@ -1,0 +1,12 @@
+NY,NYC,PS 122,K1000
+NY,NYC,PS 122,12000
+NY,NYC,PS 122,43000
+NY,NYC,St-Judes,443
+NY,NYC,St-Judes,557
+NY,Albany,Green Acres,K3
+NY,Albany,Green Acres,25
+NY,Albany,Green Acres,310
+NY,Albany,Blue Hills,3123
+NY,Albany,Blue Hills,4302
+NY,Albany,Blue Hills,567
+NY,Rochester,Happy Trails,576

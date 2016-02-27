@@ -1,0 +1,34 @@
+Project Description:
+
+Once upon a time, processing was expensive, but random access memory – the memory used while executing a program – was
+not only expensive, but also limited to an amount that we’d find totally ridiculous by today’s standards. Some programing
+environments today still carry RAM limitations, but most of us do not have to deal with that on a regular basis.
+I’m glad I don’t.
+
+For this first challenge, you therefore have to use a technique that has been used by programmers for decades.
+You start with a data file that lists the number of red-haired students in each grade, in each school, in each city,
+and in each state.  Your mission, should you choose to accept it, is to generate summaries of red-haired students per
+school, city, and state. The data is sorted per state first, city second, school third, and finally by grade (K to 6).
+
+You must write out a summary as soon as it is available. You must not read in the whole file before processing it, but
+you must process it as you read it in, line by line.
+
+Note that since I used COBOL in this example, I used fixed length fields, and my numeric values are padded with zeros.
+You may assume tab- or comma-separated input, and of course the values do not have to be zero-padded. The goal of the
+exercise is to add up the right values and display them at the right time – not to prove you can parse the input into
+local variables. Still, there are a few ways your code could get it wrong and the sample data I showed you might trigger
+some of it. Note that all data is totally fictitious.
+
+
+Requirements Breakdown:
+
+// Data File
+    - Contains a total of red-haired students in the following;
+        - State
+        - City
+        - School
+        - Grade
+    Note: This is the order the values appear in the file. See 'Sample Input.txt'.
+    - The Grade is the first character of the forth word. The reminder is the number of students.
+// Read line-by-line NOT the entire file at once.
+// Print the summary as soon as it is available.
