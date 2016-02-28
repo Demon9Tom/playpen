@@ -50,4 +50,13 @@ public class CalculateTest
         assertEquals("Index 5 should contain value 5.", 5, calculate.getNthNumberNoLoops(5));
     }
 
+    /**
+     * Test that the expected values are in the initial positions of the sequence.
+     */
+    @Test
+    public void getNthNumberNoLoopsOrVariables()
+    {
+        assertEquals("Index 5 should contain value 5.", 5, calculate.getNthNumberNoLoopsOrVariables(5));
+    }
+
 }
