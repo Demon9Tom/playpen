@@ -19,7 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="parent" target="1.5" />
+      <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
