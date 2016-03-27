@@ -35,7 +35,7 @@ public class Calculator
         LOGGER.info("Result = {}", sum);
     }
 
-    public int sumIntegerLists(Set<Integer> multiples)
+    public static int sumIntegerLists(Set<Integer> multiples)
     {
         int sum = 0;
         for (Integer value : multiples)
@@ -67,7 +67,7 @@ public class Calculator
      * @param upperBound Continuing finding multiple up to and excluding this upper bound.
      * @return All multiples of multiple up to and excluding the given upper bound.
      */
-    public List<Integer> getMultiplesOf(int multiple, int upperBound)
+    public static List<Integer> getMultiplesOf(int multiple, int upperBound)
     {
         List<Integer> multiples = new ArrayList<>();
 
@@ -95,14 +95,19 @@ public class Calculator
      * @param multiple Determine if value is a multiple of this value.
      * @return True if value is a multiple of the multiple parameter. False otherwise.
      */
-    public boolean isMultiple(int value, int multiple)
+    public static boolean isMultiple(int value, int multiple)
     {
         boolean result = ( value % multiple ) == 0;
         LOGGER.debug("Is value '{}' multiple of '{}'? result = {}", value, multiple, result);
         return result;
     }
 
-    public boolean isEven(int value)
+    /**
+     * Determines if the given value is an even number.
+     * @param value The value to test.
+     * @return True if even, false if odd.
+     */
+    public static boolean isEven(int value)
     {
         boolean result = ( value % 2 ) == 0;
         LOGGER.debug("Is value '{}' even? Result = {}", value, result);
