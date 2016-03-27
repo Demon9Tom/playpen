@@ -13,7 +13,7 @@
     <groupId>tmr.playpen.project.euler</groupId>
     <artifactId>multiples</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Multiples of 3 and 5</name>
+    <name>Multiples</name>
     <description>
         Implementation of the Multiples of 3 and 5 challenge found here:
         https://projecteuler.net/problem=1
