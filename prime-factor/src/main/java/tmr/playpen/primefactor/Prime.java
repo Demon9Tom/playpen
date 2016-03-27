@@ -10,6 +10,16 @@ public class Prime
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(Prime.class);
 
+    // TODO: Field: Hold number to determine if prime.
+    // TODO: Field: List of Primes for number.
+    // TODO: Field: List of factors for number.
+    // TODO: Field: List of Prime Factors for number.
+
+    // TODO: Implement method: isFactor
+    // TODO: Implement method: isPrimeFactor
+
+    // TODO: Need to determine largest of the factors of the number.
+
     /**
      * Determines if the given number is prime.
      * A prime number is defined as:
