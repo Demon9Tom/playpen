@@ -18,4 +18,13 @@
         http://blog.smartbear.com/programming/7-silly-programming-challenges-to-do-for-fun/
     </description>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+    </dependencies>
+
 </project>

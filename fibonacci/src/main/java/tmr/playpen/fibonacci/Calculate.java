@@ -66,7 +66,7 @@ public class Calculate
      */
     public int getNthNumberNoLoops(int position)
     {
-        LOGGER.info("Position = {}, Sequence.size() = {}", position, sequence.size());
+        LOGGER.debug("Position = {}, Sequence.size() = {}", position, sequence.size());
 
         // Terminate the recursion if the length of the sequence matches the position requested by the caller.
         // Minus 1 as size does not count from 0 like the index.
@@ -90,7 +90,7 @@ public class Calculate
      */
     public int getNthNumberNoLoopsOrVariables(int position)
     {
-        LOGGER.info("Position = {}, Sequence.size() = {}", position, sequence.size());
+        LOGGER.debug("Position = {}, Sequence.size() = {}", position, sequence.size());
 
         // Terminate the recursion if the length of the sequence matches the position requested by the caller.
         // Minus 1 as size does not count from 0 like the index.
@@ -104,4 +104,7 @@ public class Calculate
         return getNthNumberNoLoopsOrVariables(position);
     }
 
+    // TODO: Write the same function, but the last statement must be a recursive function call. The result of the
+    // recursion is returned as-is; it is not transformed in any way, or added to anything. This is a concept called
+    // tail recursion, and can be used to optimize processing in languages and compilers that support it.
 }

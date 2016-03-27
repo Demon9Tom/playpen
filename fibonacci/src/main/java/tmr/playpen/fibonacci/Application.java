@@ -15,7 +15,6 @@ public class Application
         LOGGER.info("Starting Fibonacci application.");
         Calculate calculate = new Calculate();
         calculate.process();
-
     }
 
 }

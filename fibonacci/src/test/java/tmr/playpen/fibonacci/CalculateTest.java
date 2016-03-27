@@ -1,5 +1,6 @@
 package tmr.playpen.fibonacci;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -7,6 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.google.common.base.Stopwatch;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -20,6 +23,9 @@ public class CalculateTest
     // The object under test.
     private Calculate calculate;
 
+    // A stopwatch to time method execution.
+    private Stopwatch stopwatch;
+
     @Before
     public void init()
     {
@@ -30,6 +36,13 @@ public class CalculateTest
 
         // Object under test.
         calculate = new Calculate(testSequence);
+        stopwatch = Stopwatch.createStarted();
+    }
+
+    @After
+    public void exit()
+    {
+        LOGGER.info("Method took: " + stopwatch.stop());
     }
 
     /**
