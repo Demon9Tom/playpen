@@ -1,6 +1,7 @@
 package tmr.playpen.fibonacci;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -26,6 +27,8 @@ public class CalculateTest
 
     // A stopwatch to time method execution.
     private Stopwatch stopwatch;
+
+    private static final int MULTIPLIER_MAX = 100;
 
     @Before
     public void init()
@@ -96,5 +99,30 @@ public class CalculateTest
         sequence.add(2);
 
         assertEquals("Sequence contains n - 1 = 2 and n - 2 = 1 so should return 3.", 3, calculate.calculateFibonacci());
+    }
+
+    /**
+     * Unit test for {@link Calculate#isEven(int)}}.
+     *
+     * Tests:
+     * - All even numbers up to MULTIPLIER_MAX produce true results.
+     * - All odd numbers up to MULTIPLIER_MAX produce false results.
+     */
+    @Test
+    public void isEven()
+    {
+        // Test even multipliers up tp MULTIPLIER_MAX.
+        for (int multiplier = 2; multiplier < MULTIPLIER_MAX; multiplier += 2)
+        {
+            LOGGER.info("Is Multiplier: '{}' even?", multiplier);
+            assertTrue("Should always produce a true result as we are testing with true numbers only.", Calculate.isEven(multiplier));
+        }
+
+        // Test odd multipliers up tp MULTIPLIER_MAX.
+        for (int multiplier = 3; multiplier < MULTIPLIER_MAX; multiplier += 2)
+        {
+            LOGGER.info("Is Multiplier: '{}' even?", multiplier);
+            Assert.assertFalse("Should always produce a false result as we are testing with odd numbers only.", Calculate.isEven(multiplier));
+        }
     }
 }

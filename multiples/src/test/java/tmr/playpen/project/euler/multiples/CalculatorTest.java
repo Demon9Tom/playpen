@@ -114,29 +114,4 @@ public class CalculatorTest
             }
         }
     }
-
-    /**
-     * Unit test for {@link Calculator#isEven(int)}}.
-     *
-     * Tests:
-     * - All even numbers up to MULTIPLIER_MAX produce true results.
-     * - All odd numbers up to MULTIPLIER_MAX produce false results.
-     */
-    @Test
-    public void isEven()
-    {
-        // Test even multipliers up tp MULTIPLIER_MAX.
-        for (int multiplier = 2; multiplier < MULTIPLIER_MAX; multiplier += 2)
-        {
-            LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            assertTrue("Should always produce a true result as we are testing with true numbers only.", Calculator.isEven(multiplier));
-        }
-
-        // Test odd multipliers up tp MULTIPLIER_MAX.
-        for (int multiplier = 3; multiplier < MULTIPLIER_MAX; multiplier += 2)
-        {
-            LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            assertFalse("Should always produce a false result as we are testing with odd numbers only.", Calculator.isEven(multiplier));
-        }
-    }
 }

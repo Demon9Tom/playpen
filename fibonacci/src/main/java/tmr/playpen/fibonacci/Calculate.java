@@ -82,13 +82,25 @@ public class Calculate
      * Example:
      * If we have 0, 1, 1
      * This method would return 2 (1 + 1);
-     * @return (n minus 1) add (n minus 2);
+     * @return (n minus 1) plus (n minus 2);
      */
     public int calculateFibonacci()
     {
         int nMinusOne = sequence.get(sequence.size() - 1);
         int nMinusTwo = sequence.get(sequence.size() - 2);
         return nMinusOne + nMinusTwo;
+    }
+
+    /**
+     * Determines if the given value is an even number.
+     * @param value The value to test.
+     * @return True if even, false if odd.
+     */
+    public static boolean isEven(int value)
+    {
+        boolean result = ( value % 2 ) == 0;
+        LOGGER.trace("Is value '{}' even? Result = {}", value, result);
+        return result;
     }
 
     // TODO: Write the same function, but the last statement must be a recursive function call. The result of the

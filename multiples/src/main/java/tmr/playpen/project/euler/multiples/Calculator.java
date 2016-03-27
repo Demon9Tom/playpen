@@ -87,18 +87,6 @@ public class Calculator
     }
 
     /**
-     * Determines if the given value is an even number.
-     * @param value The value to test.
-     * @return True if even, false if odd.
-     */
-    public static boolean isEven(int value)
-    {
-        boolean result = isDivisibleBy(value, 2);
-        LOGGER.trace("Is value '{}' even? Result = {}", value, result);
-        return result;
-    }
-
-    /**
      * Checks if the given value is a multiple of the given multiple.
      * @param value The value to determine if it is a multiple.
      * @param multiplier Determine if value is a multiple of this value.
