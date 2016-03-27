@@ -25,6 +25,14 @@
         <!-- Logging -->
         <logback.version>1.1.5</logback.version>
 
+        <!-- Utility Libraries -->
+
+            <!-- Google Guava -->
+            <guava.version>19.0</guava.version>
+
+            <!-- Apache Commons -->
+            <apache-commons.version>3.4</apache-commons.version>
+
     </properties>
 
     <dependencies>
@@ -39,6 +47,20 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <!-- Utility Libraries -->
+
+        <!-- Google Guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <!-- Apache Commons -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
 
     </dependencies>
@@ -62,6 +84,22 @@
                 <version>${logback.version}</version>
             </dependency>
 
+            <!-- Utility Libraries -->
+
+                <!-- Google Guava -->
+                <dependency>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                    <version>${guava.version}</version>
+                </dependency>
+
+                <!-- Apache Commons -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>${apache-commons.version}</version>
+                </dependency>
+
         </dependencies>
 
     </dependencyManagement>
@@ -70,7 +108,7 @@
 
         <plugins>
 
-            <!-- Set the Java Version for this project. -->
+            <!-- Set the Java Version for all child projects. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
