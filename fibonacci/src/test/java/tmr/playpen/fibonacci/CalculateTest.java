@@ -46,7 +46,10 @@ public class CalculateTest
     }
 
     /**
-     * Test that the expected values are in the initial positions of the sequence.
+     * Unit test for {@link Calculate#getNthNumberWithLoops(int)}.
+     *
+     * Tests:
+     * - Correct value is returned for nth position.
      */
     @Test
     public void getNthNumberWithLoops()
@@ -55,7 +58,10 @@ public class CalculateTest
     }
 
     /**
-     * Test that the expected values are in the initial positions of the sequence.
+     * Unit test for {@link Calculate#getNthNumberNoLoops(int)}.
+     *
+     * Tests:
+     * - Correct value is returned for nth position.
      */
     @Test
     public void getNthNumberNoLoops()
@@ -64,7 +70,10 @@ public class CalculateTest
     }
 
     /**
-     * Test that the expected values are in the initial positions of the sequence.
+     * Unit test for {@link Calculate#getNthNumberNoLoopsOrVariables(int)}.
+     *
+     * Tests:
+     * - Correct value is returned for nth position.
      */
     @Test
     public void getNthNumberNoLoopsOrVariables()
@@ -72,4 +81,22 @@ public class CalculateTest
         assertEquals("Index 5 should contain value 5.", 5, calculate.getNthNumberNoLoopsOrVariables(5));
     }
 
+    /**
+     * Unit test for {@link Calculate#calculateFibonacci()}.
+     *
+     * Tests:
+     * - Calculation is performed correctly.
+     */
+    @Test
+    public void calculateFibonacci()
+    {
+        assertEquals("Sequence contains n - 1 = 0 and n - 2 = 1 so should return 1.", 1, calculate.calculateFibonacci());
+
+        // Add values and retest.
+        List<Integer> sequence = calculate.getSequence();
+        sequence.add(1);
+        sequence.add(2);
+
+        assertEquals("Sequence contains n - 1 = 2 and n - 2 = 1 so should return 3.", 3, calculate.calculateFibonacci());
+    }
 }

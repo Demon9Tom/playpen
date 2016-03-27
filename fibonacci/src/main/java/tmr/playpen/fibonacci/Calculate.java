@@ -49,10 +49,7 @@ public class Calculate
         int i = 2;
         while (i <= position)
         {
-            int nMinusOne = sequence.get(i - 1);
-            int nMinusTwo = sequence.get(i - 2);
-            int n = nMinusOne + nMinusTwo;
-            sequence.add(n);
+            sequence.add(calculateFibonacci());
             i++;
         }
         return sequence.get(position);
@@ -75,11 +72,7 @@ public class Calculate
             return sequence.get(position);
         }
 
-        int nMinusOne = sequence.get(sequence.size() - 1);
-        int nMinusTwo = sequence.get(sequence.size() - 2);
-        int n = nMinusOne + nMinusTwo;
-        sequence.add(n);
-
+        sequence.add(calculateFibonacci());
         return getNthNumberNoLoops(position);
     }
 
@@ -100,11 +93,33 @@ public class Calculate
         }
 
         // Add the sequence value for position sequence.size().
-        sequence.add( (sequence.get(sequence.size() - 1)) + (sequence.get(sequence.size() - 2)) );
+        sequence.add(calculateFibonacci());
         return getNthNumberNoLoopsOrVariables(position);
+    }
+
+    /**
+     * Calculates the next position in the Fibonacci sequence.
+     *
+     * Example:
+     * If we have 0, 1, 1
+     * This method would return 2 (1 + 1);
+     * @return (n minus 1) add (n minus 2);
+     */
+    public int calculateFibonacci()
+    {
+        int nMinusOne = sequence.get(sequence.size() - 1);
+        int nMinusTwo = sequence.get(sequence.size() - 2);
+        return nMinusOne + nMinusTwo;
     }
 
     // TODO: Write the same function, but the last statement must be a recursive function call. The result of the
     // recursion is returned as-is; it is not transformed in any way, or added to anything. This is a concept called
     // tail recursion, and can be used to optimize processing in languages and compilers that support it.
+
+    // Simple getters and setters.
+
+    public List<Integer> getSequence()
+    {
+        return sequence;
+    }
 }
