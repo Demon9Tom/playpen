@@ -63,29 +63,25 @@ public class Calculator
      *
      * This means that we only check multiples of the given value rather than all values from zero upperBound.
      *
-     * @param multiple The multiple to find multiples of.
-     * @param upperBound Continuing finding multiple up to and excluding this upper bound.
+     * @param multiplier The multiple to find multiples of.
+     * @param upperBound Continuing finding multiples up to and excluding this upper bound.
      * @return All multiples of multiple up to and excluding the given upper bound.
      */
-    public static Set<Integer> getMultiplesOf(int multiple, int upperBound)
+    public static Set<Integer> getMultiplesOf(int multiplier, int upperBound)
     {
         Set<Integer> multiples = Sets.newHashSet();
 
-        int i = 1;
-
-        // Start with the value of multiple since lower values couldn't possible be multiples.
-        for (int value = multiple ; value < upperBound ; value = multiple * i)
+        // Start the loop with the value of the multiplier, and add the multiplier to the value on each iteration.
+        for (int value = multiplier; value < upperBound; value += multiplier)
         {
             LOGGER.info("Value = {}", value);
-            if (isDivisibleBy(value, multiple))
+            if (isDivisibleBy(value, multiplier))
             {
                 multiples.add(value);
             }
-
-            i++;
         }
 
-        LOGGER.info("Retuning Multiples of {}, up to, and excluding upper bound {}. Result = {}", multiple, upperBound, multiples);
+        LOGGER.info("Retuning Multiples of '{}', up to, and excluding upper bound '{}'. Result = {}", multiplier, upperBound, multiples);
         return multiples;
     }
 

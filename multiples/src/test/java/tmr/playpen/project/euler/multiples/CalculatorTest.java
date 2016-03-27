@@ -40,13 +40,13 @@ public class CalculatorTest
     @Test
     public void sumList()
     {
-        assertEquals(0, emptySet().size());
+        assertEquals("An empty list should return a zero result.", 0, emptySet().size());
 
         Set<Integer> set1 = Sets.newSet(1, 2, 3);
-        assertEquals(6, Calculator.sumList(set1));
+        assertEquals("1 + 2 + 3 should equal 6.", 6, Calculator.sumList(set1));
 
         Set<Integer> set2 = Sets.newSet(500, 1000, 1500);
-        assertEquals(3000, Calculator.sumList(set2));
+        assertEquals("500 + 1000 + 15000 should equal 3000.", 3000, Calculator.sumList(set2));
     }
 
     /**
@@ -55,7 +55,11 @@ public class CalculatorTest
     @Test
     public void getMultiplesOf()
     {
-
+        assertEquals("Should return 3, 6, and 9.", 3, Calculator.getMultiplesOf(3, 10).size());
+        assertEquals("Should return 4 and 8.", 2, Calculator.getMultiplesOf(4, 10).size());
+        assertEquals("Should return 5 (since we do not include the upper bound).", 1, Calculator.getMultiplesOf(5, 10).size());
+        assertTrue("Should be no results as we only included the upper bound.", Calculator.getMultiplesOf(10, 10).isEmpty());
+        assertTrue("Should be no results as value is out of bounds.", Calculator.getMultiplesOf(15, 10).isEmpty());
     }
 
     /**
