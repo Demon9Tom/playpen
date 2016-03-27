@@ -5,4 +5,5 @@
 
 # Ignore directories and all of thier contents. 
 */.idea/libraries/**
+*/.idea/dictionaries/**
 */target/**
