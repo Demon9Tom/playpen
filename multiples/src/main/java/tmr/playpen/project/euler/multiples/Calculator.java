@@ -24,13 +24,30 @@ public class Calculator
         Set<Integer> fiveMultiples  = getMultiplesOf(5, upperBound);
 
         // Combine the two Lists of multiples into a set to remove any duplicates.
-        Set<Integer> multiples = Sets.newHashSet();
-        multiples.addAll(threeMultiples);
-        multiples.addAll(fiveMultiples);
+        Set<Integer> multiples = mergeSets(threeMultiples, fiveMultiples);
 
         // Calculate the result.
         int sum = sumList(multiples);
         LOGGER.info("Result = {}", sum);
+    }
+
+    /**
+     * Merge the given sets into a single Set.
+     * @param sets The sets to merge.
+     * @param <T> Any type.
+     * @return The given sets merged into a single set.
+     */
+    @SafeVarargs
+    public static <T> Set<T> mergeSets(Set<T>... sets)
+    {
+        LOGGER.debug("Merging sets.");
+        Set<T> result = Sets.newHashSet();
+        for (Set<T> set : sets)
+        {
+            result.addAll(set);
+        }
+        LOGGER.trace("Returning merged set = {}", result);
+        return result;
     }
 
     /**

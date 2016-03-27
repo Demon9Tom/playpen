@@ -1,7 +1,7 @@
 package tmr.playpen.project.euler.multiples;
 
+import com.google.common.collect.Sets;
 import org.junit.Test;
-import org.mockito.internal.util.collections.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +20,24 @@ public class CalculatorTest
     private static final int MULTIPLIER_MAX = 100;
 
     /**
+     * Unit test for {@link Calculator#mergeSets(Set[])}}.
+     *
+     * Tests:
+     * - That two sets merged contain every unique values at most once.
+     */
+    @Test
+    public void mergeSets()
+    {
+        Set<Integer> threes = Sets.newHashSet(3, 6, 9, 12, 15, 18);
+        Set<Integer> fives  = Sets.newHashSet(5, 10, 15);
+
+        Set<Integer> expected = Sets.newHashSet(3, 5, 6, 9, 10, 12, 15, 18);
+        Set<Integer> result   = Calculator.mergeSets(threes, fives);
+
+        assertEquals("Should contain all values from combined list, only once.", expected, result);
+    }
+
+    /**
      * Unit test for {@link Calculator#sumList(Set)}.
      *
      * Tests:
@@ -32,10 +50,10 @@ public class CalculatorTest
     {
         assertEquals("An empty list should return a zero result.", 0, emptySet().size());
 
-        Set<Integer> set1 = Sets.newSet(1, 2, 3);
+        Set<Integer> set1 = Sets.newHashSet(1, 2, 3);
         assertEquals("1 + 2 + 3 should equal 6.", 6, Calculator.sumList(set1));
 
-        Set<Integer> set2 = Sets.newSet(500, 1000, 1500);
+        Set<Integer> set2 = Sets.newHashSet(500, 1000, 1500);
         assertEquals("500 + 1000 + 15000 should equal 3000.", 3000, Calculator.sumList(set2));
     }
 
