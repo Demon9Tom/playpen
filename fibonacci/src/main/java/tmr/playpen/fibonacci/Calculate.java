@@ -24,21 +24,6 @@ public class Calculate
     }
 
     /**
-     * Provide a Constructor for the unit testing, allowing a sequence to be passed in.
-     * @param sequence The List to hold the Fibonacci sequence.
-     */
-    public Calculate(List<Integer> sequence)
-    {
-        // Initialize the sequence.
-        this.sequence = sequence;
-    }
-
-    public void process()
-    {
-        LOGGER.info("Nth Number = {}", getNthNumberWithLoops(5));
-    }
-
-    /**
      * Returns the value in the given position of the sequence.
      * @param position The position (starting from index 0) to retrieve.
      * @return The value at the given position.

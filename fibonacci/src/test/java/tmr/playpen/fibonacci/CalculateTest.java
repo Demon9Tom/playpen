@@ -29,13 +29,7 @@ public class CalculateTest
     @Before
     public void init()
     {
-        // Initialize the sequence.
-        List<Integer> testSequence = new ArrayList<>();
-        testSequence.add(0);
-        testSequence.add(1);
-
-        // Object under test.
-        calculate = new Calculate(testSequence);
+        calculate = new Calculate();
         stopwatch = Stopwatch.createStarted();
     }
 

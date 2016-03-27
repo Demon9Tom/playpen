@@ -13,8 +13,5 @@ public class Application
     public static void main(String[] args)
     {
         LOGGER.info("Starting Fibonacci application.");
-        Calculate calculate = new Calculate();
-        calculate.process();
     }
-
 }
