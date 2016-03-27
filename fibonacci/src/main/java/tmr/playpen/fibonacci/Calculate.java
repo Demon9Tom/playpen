@@ -13,7 +13,11 @@ public class Calculate
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(Calculate.class);
 
+    // The generated Fibonacci sequence.
     private List<Integer> sequence;
+
+    // A count of the members of the sequence.
+    private int count = 0;
 
     public Calculate()
     {
@@ -65,6 +69,35 @@ public class Calculate
     }
 
     /**
+     * Generates a sum total of all even values in the Fibonacci Sequence up to the given upperBound.
+     * @param upperBound Generate the Fibonacci Sequence up to no higher than this value.
+     * @return The sum of all even values of the Fibonacci sequence up to upper bound.
+     */
+    public int evenFibonacci(int upperBound)
+    {
+        LOGGER.info("Building Sequence of Even Fibonacci numbers and totalling values. Upper Bound '{}', Count '{}'", upperBound, count);
+
+        // Terminate recursion if at requested position.
+        if (count >= upperBound)
+        {
+            return count;
+        }
+
+        // Add the sequence value for this position and recurse.
+        int value = calculateFibonacci();
+        LOGGER.debug("Added Fibonacci value = {}", value);
+        sequence.add(value);
+
+        // TODO: Add a Predicate here to determine the condition under which to add to count.
+        if (isEven(value))
+        {
+            count += value;
+        }
+
+        return evenFibonacci(upperBound);
+    }
+
+    /**
      * Checks if we are at the position requested.
      * @param position The current position.
      * @return True if the position is equal to sequence.size -1. False otherwise.
@@ -88,7 +121,9 @@ public class Calculate
     {
         int nMinusOne = sequence.get(sequence.size() - 1);
         int nMinusTwo = sequence.get(sequence.size() - 2);
-        return nMinusOne + nMinusTwo;
+        int result    = nMinusOne + nMinusTwo;
+        LOGGER.debug("Calculating Fibonacci value. (nMinusOne) {} - (nMinusTwo) {} = {}", nMinusOne, nMinusTwo, result);
+        return result;
     }
 
     /**
@@ -96,10 +131,10 @@ public class Calculate
      * @param value The value to test.
      * @return True if even, false if odd.
      */
-    public static boolean isEven(int value)
+    public boolean isEven(int value)
     {
         boolean result = ( value % 2 ) == 0;
-        LOGGER.trace("Is value '{}' even? Result = {}", value, result);
+        LOGGER.debug("Is value '{}' even? Result = {}", value, result);
         return result;
     }
 
@@ -112,5 +147,10 @@ public class Calculate
     public List<Integer> getSequence()
     {
         return sequence;
+    }
+
+    public int getCount()
+    {
+        return count;
     }
 }

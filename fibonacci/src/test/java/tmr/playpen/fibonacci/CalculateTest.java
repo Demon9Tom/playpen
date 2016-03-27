@@ -68,6 +68,19 @@ public class CalculateTest
     }
 
     /**
+     * Unit test for {@link Calculate#evenFibonacci(int)}.
+     *
+     * Tests:
+     * - Generates correct total for arguments.
+     */
+    @Test
+    public void evenFibonacci()
+    {
+        assertEquals("Sequence = 0, 1, 1, 2, 3, 5, 8. Even numbers: 2 and 8. 2 + 8 = 10.", 10, calculate.evenFibonacci(5));
+        assertEquals("Counts should match.", 4613732, calculate.evenFibonacci(4000000));
+    }
+
+    /**
      * Unit test for {@link Calculate#isNthPosition(int)}.
      *
      * Tests:
@@ -115,14 +128,14 @@ public class CalculateTest
         for (int multiplier = 2; multiplier < MULTIPLIER_MAX; multiplier += 2)
         {
             LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            assertTrue("Should always produce a true result as we are testing with true numbers only.", Calculate.isEven(multiplier));
+            assertTrue("Should always produce a true result as we are testing with true numbers only.", calculate.isEven(multiplier));
         }
 
         // Test odd multipliers up tp MULTIPLIER_MAX.
         for (int multiplier = 3; multiplier < MULTIPLIER_MAX; multiplier += 2)
         {
             LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            Assert.assertFalse("Should always produce a false result as we are testing with odd numbers only.", Calculate.isEven(multiplier));
+            Assert.assertFalse("Should always produce a false result as we are testing with odd numbers only.", calculate.isEven(multiplier));
         }
     }
 }
