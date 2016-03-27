@@ -77,7 +77,7 @@ public class Calculator
         for (int value = multiple ; value < upperBound ; value = multiple * i)
         {
             LOGGER.info("Value = {}", value);
-            if (isMultiple(value, multiple))
+            if (isDivisibleBy(value, multiple))
             {
                 multiples.add(value);
             }
@@ -90,28 +90,27 @@ public class Calculator
     }
 
     /**
-     * Checks if the given value is a multiple of the given multiple.
-     * @param value The value to determine if it is a multiple.
-     * @param multiple Determine if value is a multiple of this value.
-     * @return True if value is a multiple of the multiple parameter. False otherwise.
-     */
-    public static boolean isMultiple(int value, int multiple)
-    {
-        boolean result = ( value % multiple ) == 0;
-        LOGGER.debug("Is value '{}' multiple of '{}'? result = {}", value, multiple, result);
-        return result;
-    }
-
-    /**
      * Determines if the given value is an even number.
      * @param value The value to test.
      * @return True if even, false if odd.
      */
     public static boolean isEven(int value)
     {
-        boolean result = ( value % 2 ) == 0;
+        boolean result = isDivisibleBy(value, 2);
         LOGGER.debug("Is value '{}' even? Result = {}", value, result);
         return result;
     }
 
+    /**
+     * Checks if the given value is a multiple of the given multiple.
+     * @param value The value to determine if it is a multiple.
+     * @param multiplier Determine if value is a multiple of this value.
+     * @return True if value is a multiple of the multiple parameter. False otherwise.
+     */
+    public static boolean isDivisibleBy(int value, int multiplier)
+    {
+        boolean result = ( value % multiplier ) == 0;
+        LOGGER.debug("Is value '{}' multiple of '{}'? result = {}", value, multiplier, result);
+        return result;
+    }
 }

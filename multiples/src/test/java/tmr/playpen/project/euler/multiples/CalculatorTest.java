@@ -59,13 +59,13 @@ public class CalculatorTest
     }
 
     /**
-     * Unit test for {@link Calculator#isMultiple(int, int)}}.
+     * Unit test for {@link Calculator#isDivisibleBy(int, int)}}.
      *
      * Tests:
      * - That multipliers 1 to MULTIPLIER_MAX return the correct result.
      */
     @Test
-    public void isMultiple()
+    public void isDivisibleBy()
     {
         for (int multiplier = 1; multiplier < MULTIPLIER_MAX; multiplier++)
         {
@@ -73,7 +73,7 @@ public class CalculatorTest
             for (; total < 1000; total += multiplier)
             {
                 LOGGER.info("Total: '{}', multiple '{}'", total, multiplier);
-                assertTrue("Total * Multiplier should always produce a true result.", Calculator.isMultiple(total, multiplier));
+                assertTrue("Total * Multiplier should always produce a true result.", Calculator.isDivisibleBy(total, multiplier));
             }
         }
     }
@@ -102,5 +102,4 @@ public class CalculatorTest
             assertFalse("Should always produce a false result as we are testing with odd numbers only.", Calculator.isEven(multiplier));
         }
     }
-
 }
