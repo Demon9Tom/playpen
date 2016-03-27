@@ -1,11 +1,9 @@
 package tmr.playpen.project.euler.multiples;
 
+import com.google.common.collect.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,11 +20,11 @@ public class Calculator
     {
         int upperBound = 1000;
 
-        List<Integer> threeMultiples = getMultiplesOf(3, upperBound);
-        List<Integer> fiveMultiples  = getMultiplesOf(5, upperBound);
+        Set<Integer> threeMultiples = getMultiplesOf(3, upperBound);
+        Set<Integer> fiveMultiples  = getMultiplesOf(5, upperBound);
 
         // Combine the two Lists of multiples into a set to remove any duplicates.
-        Set<Integer> multiples = new HashSet<>();
+        Set<Integer> multiples = Sets.newHashSet();
         multiples.addAll(threeMultiples);
         multiples.addAll(fiveMultiples);
 
@@ -67,9 +65,9 @@ public class Calculator
      * @param upperBound Continuing finding multiple up to and excluding this upper bound.
      * @return All multiples of multiple up to and excluding the given upper bound.
      */
-    public static List<Integer> getMultiplesOf(int multiple, int upperBound)
+    public static Set<Integer> getMultiplesOf(int multiple, int upperBound)
     {
-        List<Integer> multiples = new ArrayList<>();
+        Set<Integer> multiples = Sets.newHashSet();
 
         int i = 1;
 
