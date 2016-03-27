@@ -2,11 +2,13 @@ package tmr.playpen.project.euler.multiples;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.internal.util.collections.Sets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 
+import static java.util.Collections.emptySet;
 import static org.junit.Assert.*;
 
 /**
@@ -28,12 +30,23 @@ public class CalculatorTest
     }
 
     /**
-     * Unit test for {@link Calculator#sumIntegerLists(Set)}.
+     * Unit test for {@link Calculator#sumList(Set)}.
+     *
+     * Tests:
+     * - Empty list total is 0.
+     * - Set {1, 2, 3} total equals 6.
+     * - Set {500, 1000, 1500} total equals 3000.
      */
     @Test
-    public void sumIntegerLists()
+    public void sumList()
     {
+        assertEquals(0, emptySet().size());
 
+        Set<Integer> set1 = Sets.newSet(1, 2, 3);
+        assertEquals(6, Calculator.sumList(set1));
+
+        Set<Integer> set2 = Sets.newSet(500, 1000, 1500);
+        assertEquals(3000, Calculator.sumList(set2));
     }
 
     /**

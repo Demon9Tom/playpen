@@ -31,18 +31,18 @@ public class Calculator
         multiples.addAll(fiveMultiples);
 
         // Calculate the result.
-        int sum = sumIntegerLists(multiples);
+        int sum = sumList(multiples);
         LOGGER.info("Result = {}", sum);
     }
 
-    public static int sumIntegerLists(Set<Integer> multiples)
+    /**
+     * Sums all Integers in the given Set.
+     * @param values A set of values to sum.
+     * @return The values of the set summed.
+     */
+    public static int sumList(Set<Integer> values)
     {
-        int sum = 0;
-        for (Integer value : multiples)
-        {
-            sum += value;
-        }
-        return sum;
+        return values.stream().reduce(0, Integer::sum);
     }
 
     /**
