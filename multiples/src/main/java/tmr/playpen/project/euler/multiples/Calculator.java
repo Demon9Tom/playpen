@@ -14,24 +14,6 @@ public class Calculator
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     /**
-     * Find the sum of all the multiples of 3 or 5 below 1000.
-     */
-    public static void process()
-    {
-        int upperBound = 1000;
-
-        Set<Integer> threeMultiples = getMultiplesOf(3, upperBound);
-        Set<Integer> fiveMultiples  = getMultiplesOf(5, upperBound);
-
-        // Combine the two Lists of multiples into a set to remove any duplicates.
-        Set<Integer> multiples = mergeSets(threeMultiples, fiveMultiples);
-
-        // Calculate the result.
-        int sum = sumList(multiples);
-        LOGGER.info("Result = {}", sum);
-    }
-
-    /**
      * Merge the given sets into a single Set.
      * @param sets The sets to merge.
      * @param <T> Any type.

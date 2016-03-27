@@ -20,6 +20,31 @@ public class CalculatorTest
     private static final int MULTIPLIER_MAX = 100;
 
     /**
+     * Functional test for the {@link Calculator} class.
+     *
+     * Test:
+     * - Get the multiples of 3 up to upper bound of 1000.
+     * - Get the multiples of 5 up to upper bound of 1000.
+     * - Merge Sets.
+     * - Calculate sum of merged Set.
+     * - Test that result is matches expected.
+     */
+    @Test
+    public void sumOfMultiplesOfThreeAndFives()
+    {
+        int upperBound = 1000;
+
+        // Calculate the multiples of three and five, and combine into a single set.
+        Set<Integer> threeMultiples = Calculator.getMultiplesOf(3, upperBound);
+        Set<Integer> fiveMultiples  = Calculator.getMultiplesOf(5, upperBound);
+        Set<Integer> multiples = Calculator.mergeSets(threeMultiples, fiveMultiples);
+
+        // Calculate the result.
+        int expected = 233168;
+        assertEquals("Total should be 233168.", expected, Calculator.sumList(multiples));
+    }
+
+    /**
      * Unit test for {@link Calculator#mergeSets(Set[])}}.
      *
      * Tests:

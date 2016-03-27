@@ -13,6 +13,5 @@ public class Application
     public static void main(String[] args)
     {
         LOGGER.info("Starting Multiples application.");
-        Calculator.process();
     }
 }
