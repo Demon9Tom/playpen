@@ -41,8 +41,7 @@ public class Calculate
     }
 
     /**
-     * Returns the value in the given position of the sequence recursively.
-     * Uses no loops and variables are only set once never reassigned.
+     * Returns the value in the given position of the sequence recursively using no loops or variables.
      * @param position The position (starting from index 0) to retrieve.
      * @return The value at the given position.
      */
@@ -50,26 +49,7 @@ public class Calculate
     {
         LOGGER.debug("Position = {}, Sequence.size() = {}", position, sequence.size());
 
-        // Terminate the recursion if the length of the sequence matches the position requested by the caller.
-        // Minus 1 as size does not count from 0 like the index.
-        if (position == sequence.size() -1)
-        {
-            return sequence.get(position);
-        }
-
-        sequence.add(calculateFibonacci());
-        return getNthNumberNoLoops(position);
-    }
-
-    /**
-     * Returns the value in the given position of the sequence recursively using no loops or variables.
-     * @param position The position (starting from index 0) to retrieve.
-     * @return The value at the given position.
-     */
-    public int getNthNumberNoLoopsOrVariables(int position)
-    {
-        LOGGER.debug("Position = {}, Sequence.size() = {}", position, sequence.size());
-
+        // TODO: method for this.
         // Terminate the recursion if the length of the sequence matches the position requested by the caller.
         // Minus 1 as size does not count from 0 like the index.
         if (position == sequence.size() -1)
@@ -79,7 +59,7 @@ public class Calculate
 
         // Add the sequence value for position sequence.size().
         sequence.add(calculateFibonacci());
-        return getNthNumberNoLoopsOrVariables(position);
+        return getNthNumberNoLoops(position);
     }
 
     /**

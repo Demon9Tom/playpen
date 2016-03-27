@@ -64,18 +64,6 @@ public class CalculateTest
     }
 
     /**
-     * Unit test for {@link Calculate#getNthNumberNoLoopsOrVariables(int)}.
-     *
-     * Tests:
-     * - Correct value is returned for nth position.
-     */
-    @Test
-    public void getNthNumberNoLoopsOrVariables()
-    {
-        assertEquals("Index 5 should contain value 5.", 5, calculate.getNthNumberNoLoopsOrVariables(5));
-    }
-
-    /**
      * Unit test for {@link Calculate#calculateFibonacci()}.
      *
      * Tests:

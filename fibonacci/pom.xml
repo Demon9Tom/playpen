@@ -16,6 +16,9 @@
     <description>
         Implementation of the Fibonacci coding challenge found here:
         http://blog.smartbear.com/programming/7-silly-programming-challenges-to-do-for-fun/
+
+        And the Project Eulur challenge here:
+        https://projecteuler.net/problem=2
     </description>
 
     <dependencies>
