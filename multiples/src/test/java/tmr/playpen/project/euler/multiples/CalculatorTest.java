@@ -60,7 +60,7 @@ public class CalculatorTest
             for (; total < 1000; total += multiplier)
             {
                 LOGGER.info("Total: '{}', multiple '{}'", total, multiplier);
-                assertTrue("Total * Multiplier should always produce a true result.", calculator.isMultiple(total, multiplier));
+                assertTrue("Total * Multiplier should always produce a true result.", Calculator.isMultiple(total, multiplier));
             }
         }
     }
@@ -79,14 +79,14 @@ public class CalculatorTest
         for (int multiplier = 2; multiplier < MULTIPLIER_MAX; multiplier += 2)
         {
             LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            assertTrue("Should always produce a true result as we are testing with true numbers only.", calculator.isEven(multiplier));
+            assertTrue("Should always produce a true result as we are testing with true numbers only.", Calculator.isEven(multiplier));
         }
 
         // Test odd multipliers up tp MULTIPLIER_MAX.
         for (int multiplier = 3; multiplier < MULTIPLIER_MAX; multiplier += 2)
         {
             LOGGER.info("Is Multiplier: '{}' even?", multiplier);
-            assertFalse("Should always produce a false result as we are testing with odd numbers only.", calculator.isEven(multiplier));
+            assertFalse("Should always produce a false result as we are testing with odd numbers only.", Calculator.isEven(multiplier));
         }
     }
 
