@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Entry point for Project Euler - Challenge 2 (Prime Factor application).
+ * Entry point for Project Euler - Challenge 3 (Prime Factor application).
  */
 public class Application
 {
