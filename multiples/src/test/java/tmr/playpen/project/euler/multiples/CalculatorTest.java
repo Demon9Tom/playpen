@@ -1,6 +1,5 @@
 package tmr.playpen.project.euler.multiples;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.mockito.internal.util.collections.Sets;
 import org.slf4j.Logger;
@@ -12,7 +11,7 @@ import static java.util.Collections.emptySet;
 import static org.junit.Assert.*;
 
 /**
- * TODO:
+ * Unit tests for {@link Calculator} class.
  */
 public class CalculatorTest
 {
