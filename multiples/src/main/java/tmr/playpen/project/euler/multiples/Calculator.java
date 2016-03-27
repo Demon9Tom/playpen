@@ -98,7 +98,14 @@ public class Calculator
     public boolean isMultiple(int value, int multiple)
     {
         boolean result = ( value % multiple ) == 0;
-        LOGGER.trace("Is value {} multiple of {} result = {}", value, multiple, result);
+        LOGGER.debug("Is value '{}' multiple of '{}'? result = {}", value, multiple, result);
+        return result;
+    }
+
+    public boolean isEven(int value)
+    {
+        boolean result = ( value % 2 ) == 0;
+        LOGGER.debug("Is value '{}' even? Result = {}", value, result);
         return result;
     }
 
