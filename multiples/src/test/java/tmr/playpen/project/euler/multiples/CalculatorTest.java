@@ -18,16 +18,7 @@ public class CalculatorTest
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(CalculatorTest.class);
 
-    // Class under test.
-    private Calculator calculator;
-
     private static final int MULTIPLIER_MAX = 100;
-
-    @Before
-    public void initialise()
-    {
-        calculator = new Calculator();
-    }
 
     /**
      * Unit test for {@link Calculator#sumList(Set)}.

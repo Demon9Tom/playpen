@@ -16,7 +16,7 @@ public class Calculator
     /**
      * Find the sum of all the multiples of 3 or 5 below 1000.
      */
-    public void process()
+    public static void process()
     {
         int upperBound = 1000;
 
@@ -40,8 +40,9 @@ public class Calculator
      */
     public static int sumList(Set<Integer> values)
     {
+        LOGGER.info("Calculating sum of Set = {}", values);
         int sum = values.stream().reduce(0, Integer::sum);
-        LOGGER.debug("Returning total '{}' for Set: {}", sum, values);
+        LOGGER.info("Returning total '{}'", sum);
         return sum;
     }
 
@@ -69,19 +70,20 @@ public class Calculator
      */
     public static Set<Integer> getMultiplesOf(int multiplier, int upperBound)
     {
+        LOGGER.info("Generating Set of multiples for multiplier '{}', up to and excluding '{}'", multiplier, upperBound);
         Set<Integer> multiples = Sets.newHashSet();
 
         // Start the loop with the value of the multiplier, and add the multiplier to the value on each iteration.
         for (int value = multiplier; value < upperBound; value += multiplier)
         {
-            LOGGER.info("Value = {}", value);
+            LOGGER.trace("Multiplier '{}'. Value = {}", value);
             if (isDivisibleBy(value, multiplier))
             {
                 multiples.add(value);
             }
         }
 
-        LOGGER.info("Retuning Multiples of '{}', up to, and excluding upper bound '{}'. Result = {}", multiplier, upperBound, multiples);
+        LOGGER.info("Retuning result = {}", multiples);
         return multiples;
     }
 
@@ -93,7 +95,7 @@ public class Calculator
     public static boolean isEven(int value)
     {
         boolean result = isDivisibleBy(value, 2);
-        LOGGER.debug("Is value '{}' even? Result = {}", value, result);
+        LOGGER.trace("Is value '{}' even? Result = {}", value, result);
         return result;
     }
 
@@ -106,7 +108,7 @@ public class Calculator
     public static boolean isDivisibleBy(int value, int multiplier)
     {
         boolean result = ( value % multiplier ) == 0;
-        LOGGER.debug("Is value '{}' multiple of '{}'? result = {}", value, multiplier, result);
+        LOGGER.trace("Is value '{}' multiple of '{}'? result = {}", value, multiplier, result);
         return result;
     }
 }
