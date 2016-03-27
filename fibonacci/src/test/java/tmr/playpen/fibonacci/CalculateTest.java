@@ -6,12 +6,13 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.common.base.Stopwatch;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit tests for the {@link Calculate} class.
@@ -61,6 +62,21 @@ public class CalculateTest
     public void getNthNumberNoLoops()
     {
         assertEquals("Index 5 should contain value 5.", 5, calculate.getNthNumberNoLoops(5));
+    }
+
+    /**
+     * Unit test for {@link Calculate#isNthPosition(int)}.
+     *
+     * Tests:
+     * - Test that Nth position is matched correctly.
+     */
+    @Test
+    public void isNthPosition()
+    {
+        assertEquals("Should be size 2 after initialization.", 2, calculate.getSequence().size());
+        assertTrue("Should contain 0, 1. Therefore 1 is Nth Position.", calculate.isNthPosition(1));
+        assertFalse("Should contain 0, 1. Therefore 1 is Nth Position.", calculate.isNthPosition(0));
+        assertFalse("Should contain 0, 1. Therefore 1 is Nth Position.", calculate.isNthPosition(2));
     }
 
     /**

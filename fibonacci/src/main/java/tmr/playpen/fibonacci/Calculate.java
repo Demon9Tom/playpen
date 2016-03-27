@@ -42,6 +42,10 @@ public class Calculate
 
     /**
      * Returns the value in the given position of the sequence recursively using no loops or variables.
+     *
+     * The recursion if terminated once the size of the sequence - 1 matches the position requested by the caller.
+     * Minus 1 as the size of the List does not count from 0 like the index position.
+     *
      * @param position The position (starting from index 0) to retrieve.
      * @return The value at the given position.
      */
@@ -49,17 +53,27 @@ public class Calculate
     {
         LOGGER.debug("Position = {}, Sequence.size() = {}", position, sequence.size());
 
-        // TODO: method for this.
-        // Terminate the recursion if the length of the sequence matches the position requested by the caller.
-        // Minus 1 as size does not count from 0 like the index.
-        if (position == sequence.size() -1)
+        // Terminate recursion if at requested position.
+        if (isNthPosition(position))
         {
             return sequence.get(position);
         }
 
-        // Add the sequence value for position sequence.size().
+        // Add the sequence value for this position and recurse.
         sequence.add(calculateFibonacci());
         return getNthNumberNoLoops(position);
+    }
+
+    /**
+     * Checks if we are at the position requested.
+     * @param position The current position.
+     * @return True if the position is equal to sequence.size -1. False otherwise.
+     */
+    public boolean isNthPosition(int position)
+    {
+        boolean result = position == (sequence.size() -1);
+        LOGGER.trace("Is Nth Position '{}'. Returning result = {}", position, result);
+        return result;
     }
 
     /**
