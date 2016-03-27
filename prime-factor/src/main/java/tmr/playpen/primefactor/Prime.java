@@ -18,11 +18,12 @@ public class Prime
      * - Divisible by itself.
      * - Not the number one.
      * @param number The number to test.
+     * @param divisor the number to divide number by. Incremented on each call.
      * @return true if the given number is Prime. False otherwise.
      */
-    public static boolean isPrime(int number, double i)
+    public static boolean isPrime(int number, int divisor)
     {
-        LOGGER.debug("Is Prime Test. Testing number '{}'. Divisible by '{}'", number, i);
+        LOGGER.debug("Is Prime Test. Testing number '{}'. Divisible by '{}'", number, divisor);
 
         // One is a unity number, not a prime.
         if (number == 1)
@@ -32,21 +33,21 @@ public class Prime
         }
 
         // If true number is only divisible by itself.
-        if (i == number)
+        if (divisor == number)
         {
             LOGGER.debug("Returning True.");
             return true;
         }
 
-        boolean isPrime = (number % i) == 0;
+        boolean isPrime = (number % divisor) == 0;
 
         // If true this number is divisible by something other than itself. Thus not prime.
         if (isPrime)
         {
-            LOGGER.debug("Returning False. Number '{}' is divisible by '{}'. Not Prime.", number, i);
+            LOGGER.debug("Returning False. Number '{}' is divisible by '{}'. Not Prime.", number, divisor);
             return false;
         }
 
-        return isPrime(number, ++i);
+        return isPrime(number, ++divisor);
     }
 }

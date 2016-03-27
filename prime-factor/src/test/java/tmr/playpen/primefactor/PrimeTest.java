@@ -22,7 +22,7 @@ public class PrimeTest
     private static final List<Integer> notPrimes = newArrayList(1, 4, 6, 8, 9, 10, 12, 14, 15, 16);
 
     /**
-     * Unit test for {@link Prime#isPrime(int, double)}.
+     * Unit test for {@link Prime#isPrime(int, int)}.
      *
      * Tests:
      * - Prime numbers pass the test.
