@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Entry point for the Fibonacci application. Used to bootstrap the application.
+ * Entry point for Project Euler - Challenge 1 (Multiples of 3 and 5) application.
  */
 public class Application
 {
