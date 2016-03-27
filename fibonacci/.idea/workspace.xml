@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c29c99-8e8e-49d0-9cdb-0fe12d5f5de4" name="Default" comment="Added implementation using no local variables or loops.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../multiples/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../parent/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../parent/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fibonacci.iml" afterPath="$PROJECT_DIR$/fibonacci.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Application.java" afterPath="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Calculate.java" afterPath="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Calculate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tmr/playpen/fibonacci/CalculateTest.java" afterPath="$PROJECT_DIR$/src/test/java/tmr/playpen/fibonacci/CalculateTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../parent/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/parent.iml" afterPath="$PROJECT_DIR$/../parent/parent.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../parent/pom.xml" afterPath="$PROJECT_DIR$/../parent/pom.xml" />
     </list>
     <ignored path="fibonacci.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,32 +55,32 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3076925">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state vertical-scroll-proportion="-3.7307692">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parent-1.0-SNAPSHOT.pom" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parent-1.0-SNAPSHOT.pom" pinned="false" current-in-tab="true">
         <entry file="file://$MAVEN_REPOSITORY$/tmr/playpen/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.807693">
-              <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+            <state vertical-scroll-proportion="2.2595978">
+              <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculateTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculateTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tmr/playpen/fibonacci/CalculateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8900524">
-              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#989#990#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,10 +136,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/Project Description.txt" />
         <option value="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Application.java" />
         <option value="$PROJECT_DIR$/../pom.xml" />
-        <option value="$MAVEN_REPOSITORY$/tmr/playpen/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom" />
         <option value="$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Calculate.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tmr/playpen/fibonacci/CalculateTest.java" />
+        <option value="$MAVEN_REPOSITORY$/tmr/playpen/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom" />
       </list>
     </option>
   </component>
@@ -347,7 +344,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../parent" />
   </component>
   <component name="RunManager" selected="JUnit.CalculateTest">
     <configuration default="false" name="CalculateTest.getNthNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -962,7 +959,7 @@
       <workItem from="1456668163221" duration="750000" />
       <workItem from="1456668976572" duration="7000" />
       <workItem from="1459082423369" duration="1135000" />
-      <workItem from="1459083575183" duration="829000" />
+      <workItem from="1459083575183" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;&#10;Implementation of two different methods for calculating the Fibonacci sequence one using a loop, and the other using recursion.">
       <created>1456656721788</created>
@@ -982,7 +979,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456668599455</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Stopwatch to record method times.">
+      <created>1459084482610</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1459084482610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1018,7 +1021,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10407000" />
+    <option name="totallyTimeSpent" value="10907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1031,7 +1034,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1065,7 +1068,8 @@
     <MESSAGE value="Initial commit.&#10;&#10;Implementation of two different methods for calculating the Fibonacci sequence one using a loop, and the other using recursion." />
     <MESSAGE value="Added implementation using no local variables or loops." />
     <MESSAGE value="Replaced Project POM dependencies with the Project parent POM." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced Project POM dependencies with the Project parent POM." />
+    <MESSAGE value="Added Stopwatch to record method times." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Stopwatch to record method times." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1106,8 +1110,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1156,8 +1160,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1206,8 +1210,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1256,8 +1260,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1299,8 +1303,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1342,8 +1346,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1377,8 +1381,8 @@
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1412,8 +1416,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1477,22 +1481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/tmr/playpen/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.807693">
-          <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3076925">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tmr/playpen/fibonacci/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1503,13 +1491,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tmr/playpen/fibonacci/CalculateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8900524">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7307692">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/tmr/playpen/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2595978">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
