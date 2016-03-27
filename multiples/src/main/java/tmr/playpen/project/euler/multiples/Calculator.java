@@ -40,7 +40,9 @@ public class Calculator
      */
     public static int sumList(Set<Integer> values)
     {
-        return values.stream().reduce(0, Integer::sum);
+        int sum = values.stream().reduce(0, Integer::sum);
+        LOGGER.debug("Returning total '{}' for Set: {}", sum, values);
+        return sum;
     }
 
     /**
