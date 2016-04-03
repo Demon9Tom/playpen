@@ -77,6 +77,12 @@
                 <artifactId>commons-lang3</artifactId>
             </dependency>
 
+            <!-- Google Guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+            </dependency>
+
     </dependencies>
 
     <dependencyManagement>

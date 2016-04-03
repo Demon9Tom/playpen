@@ -21,14 +21,4 @@
         https://projecteuler.net/problem=2
     </description>
 
-    <dependencies>
-
-        <!-- Utility Libraries -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-
-    </dependencies>
-
 </project>

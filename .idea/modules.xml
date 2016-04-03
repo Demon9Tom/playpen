@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fibonacci/fibonacci.iml" filepath="$PROJECT_DIR$/fibonacci/fibonacci.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiples/multiples.iml" filepath="$PROJECT_DIR$/multiples/multiples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/playpen.iml" filepath="$PROJECT_DIR$/.idea/playpen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/prime-factor/prime-factor.iml" filepath="$PROJECT_DIR$/prime-factor/prime-factor.iml" />
       <module fileurl="file://$PROJECT_DIR$/sums/sums.iml" filepath="$PROJECT_DIR$/sums/sums.iml" />
     </modules>
