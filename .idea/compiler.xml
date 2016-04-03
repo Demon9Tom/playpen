@@ -22,10 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="fibonacci" />
+        <module name="multiples" />
+        <module name="prime-factor" />
         <module name="sums" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
+      <module name="fibonacci" target="1.8" />
+      <module name="multiples" target="1.8" />
+      <module name="playpen" target="1.8" />
+      <module name="prime-factor" target="1.8" />
       <module name="sums" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fibonacci.iml" filepath="$PROJECT_DIR$/fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fibonacci.iml" filepath="$PROJECT_DIR$/fibonacci.iml" />
     </modules>
   </component>
 </project>
