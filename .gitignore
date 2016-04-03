@@ -3,8 +3,9 @@
 */.idea/tasks.xml
 */.iws
 
-# Ignore directories and their content. 
+# Ignore directories and their content.
+/.idea/libraries/**
 */.idea/libraries/**
-.idea/dictionaries/**
 */.idea/dictionaries/**
 */target/**
+
